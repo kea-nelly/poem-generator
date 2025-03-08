@@ -19,14 +19,15 @@ h1 {
   color: blueviolet;
   text-align: center;
 }
-
-form {
-  padding: 30px;
+.form-container {
   background-color: white;
-  border-radius: 10px;
-  display: flex;
-  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.28);
   margin-bottom: 30px;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.28);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+form {
+  display: flex;
 }
 .instructions {
   padding: 10px;
@@ -35,6 +36,12 @@ form {
   font-size: 16px;
   border-radius: 50px;
   line-height: 20px;
+}
+.hint {
+  line-height: 1.5;
+  margin-top: 5px;
+  font-size: 12px;
+  opacity: 0.6;
 }
 .submit-button {
   margin-left: 10px;
@@ -53,6 +60,18 @@ form {
   line-height: 2;
   border-left: 3px solid #885df1;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.15);
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+.hidden {
+  display: none;
 }
 .poem strong {
   color: blueviolet;
